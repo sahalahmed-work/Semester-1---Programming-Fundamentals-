@@ -1,0 +1,324 @@
+// Q1: Student Information Program
+
+#include <stdio.h>
+int main() {
+    // Variable Declarations
+    char name[50];
+    int RollNo;
+    int Age;
+    float Height;
+    float GPA;
+    char Section;
+
+    // Taking user input for student information
+    printf("Enter name: ");
+    scanf("%s", name);
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &RollNo);
+
+    printf("Enter Age: ");
+    scanf("%d", &Age);
+
+    printf("Enter Height in metres: ");
+    scanf("%f", &Height);
+
+    printf("Enter GPA: ");
+    scanf("%f", &GPA);
+
+    printf("Enter Section: ");
+    scanf(" %c", &Section);
+
+    // Formatted Output Display 
+    printf("===========================================\n");
+    printf("           Student Information\n");
+    printf("===========================================\n");
+    printf("Name         : %s\n", name);
+    printf("Roll No.     : %d\n", RollNo);
+    printf("Age          : %d\n", Age);
+    printf("Height       : %.2f metres\n", Height);
+    printf("GPA          : %.2f\n", GPA);
+    printf("Section      : %c\n", Section);
+    printf("===========================================\n");
+
+    return 0;
+}
+
+// Q2: Data Type and Format Specifier Demonstration
+#include <stdio.h>
+ int main() { 
+    int num_int;
+    unsigned int num_uint;
+    float num_float;
+    double num_double;
+    char ch;
+    long int num_long;
+
+    printf("Enter an Integer (Int): ");
+    scanf("%d", &num_int);
+
+    printf("Enter an Unsigned integer (unsigned int): ");
+    scanf("%u", &num_uint);
+
+    printf("Enter a Float value: ");
+    scanf("%f", &num_float);
+
+    printf("Enter a Double value: ");
+    scanf("%lf", &num_double);
+
+    printf("Enter a Character(char): ");
+    scanf(" %c", &ch);
+
+    printf("Enter a Long integer (long int): ");
+    scanf("%ld", &num_long);
+
+    printf("\n===========================================\n");
+    printf("           Data Type Demonstration\n");
+    printf("===========================================\n");
+
+    // Integer Formats
+    printf("--- Integer Representations (%d) ---\n", num_int);
+    printf("Decimal                 : %d\n", num_int);
+    printf("Octal                   : %o\n", num_int);
+    printf("Hexadecimal (lowercase) : %x\n", num_int);
+    printf("Hexadecimal (uppercase) : %X\n", num_int);
+
+    //Floating-Point Formats
+    printf("\n--- Floating-Point Representations (%f) ---\n", num_float);
+    printf("Standard (%%f)        : %f\n", num_float);
+    printf("Exponential (%%e)     : %e\n", num_float);
+    printf("Shortest (%%g)        : %g\n", num_float);
+
+    // Other Variables
+    printf("\n--- Other Data Types ---\n");
+
+    printf("Unsigned Int           : %u\n", num_uint);  
+    printf("Double                 : %.2lf\n", num_double);
+    printf("Character              : %c\n", ch);
+    printf("Long Integer           : %ld\n", num_long);
+
+    printf("===========================================\n");
+
+    return 0;
+}
+
+// Q3: Precision Comparison
+#include <stdio.h>
+int main() {
+    float float_num;
+    double double_num;
+
+    printf("Enter a float value: ");
+    scanf("%f", &float_num);
+
+    printf("Enter a double value: ");
+    scanf("%lf", &double_num);
+
+    printf("\n===========================================\n");
+    printf("           Precision Comparison\n");    
+    printf("===========================================\n");
+
+    printf("Float Value:\n");
+    printf("Default          : %f\n", float_num);
+    printf("2 decimal places : %.2f\n", float_num);
+    printf("4 decimal places : %.4f\n", float_num);
+    printf("6 decimal places : %.6f\n\n", float_num);
+
+    printf("Double Value:\n");
+    printf("Default          : %f\n", double_num);
+    printf("2 decimal places : %.2lf\n", double_num);
+    printf("4 decimal places : %.4lf\n", double_num);   
+    printf("6 decimal places : %.6lf\n", double_num);
+    printf("===========================================\n");
+
+    return 0;
+}
+
+// Q4: Character Input and Output 
+#include <stdio.h>
+int main() {
+
+    char ch_1;
+    char ch_2;
+    char ch_3;
+
+    printf("Enter First Character: ");
+    ch_1 = getchar();
+    getchar();  
+
+    printf("Enter Second Character: ");
+    ch_2 = getchar();   
+    getchar();
+
+    printf("Enter Third Character: ");
+    ch_3 = getchar();   
+
+    printf("\n-----------------------------------\n");
+    printf("Characters Entered:\n");
+
+    printf("First Character: ");
+    putchar(ch_1);
+    putchar('\n');
+
+    printf("Second Character: ");
+    putchar(ch_2);
+    putchar('\n');
+
+    printf("Third Character: ");
+    putchar(ch_3);
+    putchar('\n');
+
+    printf("-----------------------------------\n");
+
+    return 0;
+}
+
+// Q5: Personal Profile Using String I/O
+#include <string.h>
+int main() {
+    char full_name[50];
+    char City[30];
+    char University[50];
+    char Department [40];
+
+    printf("Enter your full name: ");
+    scanf("%[^\n]", full_name);
+
+    printf("Enter your city: ");
+    scanf(" %[^\n]", City);
+
+    printf("Enter your university name: ");
+    scanf(" %[^\n]", University);
+
+    printf("Enter your department: ");
+    scanf(" %[^\n]", Department);
+
+    // Formatted Output Display
+    printf("\n===========================================\n");
+    printf("           STUDENT PROFILE\n");    
+    printf("===========================================\n");
+    printf("Full Name   : %s\n", full_name);        
+    printf("City        : %s\n", City);
+    printf("University  : %s\n", University);
+    printf("Department  : %s\n", Department);
+    printf("===========================================\n");
+
+    return 0;
+
+}
+
+// Q6: Formatted Student Report
+#include <stdio.h>
+int main() {
+
+    char Std_name[30];
+    int RollNo;
+    char Section;
+    int Age;
+    float CGPA;
+    float Height;
+
+    printf("Enter the student's name: ");
+    scanf("%[^\n]", Std_name);
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &RollNo);
+
+    printf("Enter your Section: ");
+    scanf(" %c", &Section);
+
+    printf("Enter your age: ");
+    scanf("%d", &Age);
+
+    printf("Enter your CGPA: ");
+    scanf("%f", &CGPA);
+
+    printf("Enter your Height: ");
+    scanf("%f", &Height);
+
+    //Formatted Table Output Using \t and \n
+
+    printf("\n------------------------------------------------\n");
+    printf("  \t STUDENT REPORT\n");
+
+    printf("------------------------------------------------\n");
+    printf("Name\t\t: %s\n", Std_name);
+    printf("Roll Number\t: %d\n", RollNo);
+    printf("Section\t\t: %c\n", Section);
+    printf("Age\t\t: %d\n", Age);
+    printf("CGPA\t\t: %.2f\n", CGPA);   
+    printf("Height\t\t: %.2f\n", Height);
+    printf("------------------------------------------------\n");
+
+    return 0;
+}
+
+
+// Q7: Output Formatting Challenge
+#include <stdio.h>
+int main() {
+   char name[30];
+   int RollNo;
+   char Section;
+   float Value;
+   char SampleChar;
+   char question[100];
+
+   printf("Enter the student's name: ");
+   scanf("%[^\n]", name);
+
+   printf("Enter Roll Number: ");
+   scanf("%d", &RollNo);
+
+   printf("Enter your Section: ");
+   scanf(" %c", &Section);
+
+    printf("Enter a float value: ");
+    scanf("%f", &Value);
+    
+    printf("Enter a sample character: ");
+    getchar(); // Clear the newline
+    SampleChar = getchar();
+
+    getchar();
+
+    printf("Enter Sample Question: ");
+    fgets(question, sizeof(question), stdin);
+
+    // Formatted Output Display
+
+    printf("\n===========================================\n");
+    printf("           PROGRAMMING FUNDAMENTALS\n");  
+    printf("===========================================\n");
+
+    printf("Name\t\t: %s\n", name);
+    printf("Roll Number\t: %d\n", RollNo);
+    printf("Section\t\t: %c\n", Section);
+    printf("\n");
+
+    printf("C topics: \n");
+    printf("\t1.   Variables \n");
+    printf("\t2.   Data Types \n");    
+    printf("\t3.   Input/Output \n");
+    printf("\t4.   Format Specifiers \n");
+    printf("\t5.   Escape Sequences \n");
+    printf("\n");
+
+    printf("Sample Character:  '");
+    putchar(SampleChar);
+    printf("'\n");
+
+    printf("\n Sample Question:  ");
+    puts(question);
+
+    printf("Float Value:\n");
+    printf("Default      : %f\n", Value);
+    printf("2-digit      : %.2f\n", Value);
+    printf("4-digit      : %.4f\n", Value);
+    printf("\n");
+
+    printf("===========================================\n");
+
+    return 0;
+
+}
